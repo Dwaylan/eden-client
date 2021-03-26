@@ -1,5 +1,6 @@
 import React from "react";
-import { Switch, Route, Redirect } from "react-router";
+import { Switch, Route } from "react-router";
+// commenting out redirect for now  but it will need to be added in the react-router import
 import Landingpage from "../Components/Landingpage/Landingpage";
 
 // const checkAuth = () => {
