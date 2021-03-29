@@ -3,9 +3,10 @@ import { useHistory } from "react-router-dom";
 import "./Nav.css";
 
 function NurseryButton() {
-  let history = useHistory;
+  let history = useHistory();
 
   function handleClick() {
+    console.log("nursery button was clicked");
     history.push("/nursery");
   }
   return (

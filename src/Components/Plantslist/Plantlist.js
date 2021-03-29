@@ -12,13 +12,19 @@ class Plantlist extends Component {
     };
   }
 
-  componentDidMount() {
+  plantPayload() {
     const plantApi =
       "https://trefle.io/api/v1/plants?token=2Hw0j0YkP8-Ofc33sQ_gVnULzQv_Zw78Ci7dYl78N8E";
 
-    fetch(plantApi)
-      .then ((res) => res.json())
-      .then((data) => this.setState({ plants: data }));
+    // fetch(plantApi)
+    //   .then((res) => res.json())
+    //   .then((data) => this.setState({ plants: data }));
+    // console.log("payload detected", this.data);
+    (async () => {
+      const response = await fetch(plantApi);
+      const json = await response.json();
+      console.log(json);
+    })();
   }
 
   render() {

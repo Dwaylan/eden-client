@@ -24,8 +24,8 @@ import Nursery from "../Components/Nursery/Nursery";
 const Router = () => {
   return (
     <Switch>
-      <Route path="/" component={Landingpage}></Route>
-      <Route path="/nursery" component={Nursery}></Route>
+      <Route exact path="/" component={Landingpage}></Route>
+      <Route exact path="/nursery" component={Nursery}></Route>
     </Switch>
   );
 };
