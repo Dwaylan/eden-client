@@ -17,11 +17,27 @@ function NurseryButton() {
   );
 }
 
+function LoginButton() {
+  let history = useHistory();
+
+  function handleClick() {
+    console.log("login button was clicked");
+    history.push("/login");
+  }
+  return (
+    <button type="button" onClick={handleClick}>
+      {" "}
+      Login{" "}
+    </button>
+  );
+}
+
 export default function Nav() {
   return (
     <div className="Nav">
-      <h1>Nav</h1>
+      <h1>Welcome to the eden app</h1>
       <NurseryButton />
+      <LoginButton />
     </div>
   );
 }

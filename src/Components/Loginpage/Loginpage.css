@@ -1,0 +1,11 @@
+.form_container {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border: solid 2px;
+  background-color: #efe3db;
+}
