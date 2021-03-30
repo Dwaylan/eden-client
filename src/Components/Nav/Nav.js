@@ -35,7 +35,6 @@ function LoginButton() {
 export default function Nav() {
   return (
     <div className="Nav">
-      <h1>Welcome to the eden app</h1>
       <NurseryButton />
       <LoginButton />
     </div>
