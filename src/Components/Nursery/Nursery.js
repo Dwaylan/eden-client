@@ -17,6 +17,23 @@ function HomeButton() {
 }
 
 class Nursery extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      plants: [],
+    };
+  }
+
+  componentDidMount() {
+    const plantApi =
+      "https://trefle.io/api/v1/plants?token=2Hw0j0YkP8-Ofc33sQ_gVnULzQv_Zw78Ci7dYl78N8E";
+
+    fetch(plantApi)
+      .then((res) => res.json())
+      .then((data) => this.setState({ plants: data }));
+    console.log("payload detected", this.data);
+  }
+
   render() {
     return (
       <li>
