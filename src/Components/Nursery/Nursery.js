@@ -1,6 +1,28 @@
 import React, { Component } from "react";
 import { useHistory } from "react-router-dom";
 
+class Nursery extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <li>
+        <div>
+          <h2> Name:{this.props.common_name}</h2>
+          <h4>Scientific name:{this.props.scientific_name}</h4>
+          <h4>State: {this.props.State}</h4>
+          <h4> Toxicity: {this.props.Toxicity}</h4>
+          <h4>Life Cycle: {this.props.Life_cycle}</h4>
+        </div>
+        <img src={this.props.image} alt="plant"></img>
+        <HomeButton />
+      </li>
+    );
+  }
+}
+
 function HomeButton() {
   let history = useHistory();
 
@@ -14,39 +36,6 @@ function HomeButton() {
       Home{" "}
     </button>
   );
-}
-
-class Nursery extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      plants: [],
-    };
-  }
-
-  componentDidMount() {
-    // const plantApi =
-    //   "https://trefle.io/api/v1/plants?token=2Hw0j0YkP8-Ofc33sQ_gVnULzQv_Zw78Ci7dYl78N8E";
-
-    fetch("https://eden-rest-api.vercel.app/")
-      .then((res) => res.json())
-      .then((data) => this.setState({ plants: data }));
-    console.log("payload detected", this.data);
-  }
-
-  render() {
-    return (
-      <li>
-        <div>
-          <h2> Common name:{this.props.common_name}</h2>
-          <img src={this.props.image} alt="plant"></img>
-          <h3>Scientific name:{this.props.scientific_name}</h3>
-          <h3> Slug: {this.props.slug}</h3>
-        </div>
-        <HomeButton />
-      </li>
-    );
-  }
 }
 
 export default Nursery;
