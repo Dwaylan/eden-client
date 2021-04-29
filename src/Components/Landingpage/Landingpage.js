@@ -16,6 +16,13 @@ export default function Landingpage() {
         with the eden app users can find information on their favorite plants in
         the palm of their hand.
       </p>
+      <h2>Features</h2>
+      <p>
+        Each plant within our eden database will have information pertaining to
+        its lifecyle, toxicity, and location. Our goal is to recognize
+        indegenous plants by state while making users aware of posionus and
+        invasive species
+      </p>
     </div>
   );
 }
