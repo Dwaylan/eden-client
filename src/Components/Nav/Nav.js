@@ -17,26 +17,26 @@ function NurseryButton() {
   );
 }
 
-function LoginButton() {
-  let history = useHistory();
+// function LoginButton() {
+//   let history = useHistory();
 
-  function handleClick() {
-    console.log("login button was clicked");
-    history.push("/login");
-  }
-  return (
-    <button type="button" onClick={handleClick}>
-      {" "}
-      Login{" "}
-    </button>
-  );
-}
+//   function handleClick() {
+//     console.log("login button was clicked");
+//     history.push("/login");
+//   }
+//   return (
+//     <button type="button" onClick={handleClick}>
+//       {" "}
+//       Login{" "}
+//     </button>
+//   );
+// }
 
 export default function Nav() {
   return (
     <div className="Nav">
       <NurseryButton />
-      <LoginButton />
+      {/* <LoginButton /> */}
     </div>
   );
 }

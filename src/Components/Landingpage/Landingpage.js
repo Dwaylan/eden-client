@@ -23,6 +23,7 @@ export default function Landingpage() {
         indegenous plants by state while making users aware of posionus and
         invasive species
       </p>
+      <h2>The Future</h2>
     </div>
   );
 }

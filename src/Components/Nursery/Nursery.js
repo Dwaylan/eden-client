@@ -33,7 +33,7 @@ function HomeButton() {
   return (
     <button type="button" onClick={handleClick}>
       {" "}
-      Home{" "}
+      Logout{" "}
     </button>
   );
 }
