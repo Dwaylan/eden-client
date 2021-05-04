@@ -1,5 +1,5 @@
 import React, { Component } from "./node_modules/react";
-import Nursery from "../Nursery/Nursery";
+import Nursery from "../Nursery";
 
 const fetch = require("node-fetch");
 

@@ -4,31 +4,50 @@ import { useHistory } from "react-router-dom";
 class Nursery extends Component {
   constructor(props) {
     super(props);
+
+    this.state = {
+      plants: [],
+    };
+  }
+  componentDidMount() {
+    const plantApi = "https://eden-rest-api.vercel.app/plants";
+
+    fetch(plantApi)
+      .then((res) => res.json())
+      .then((data) => this.setState({ plants: data }));
   }
 
   render() {
+    console.log("payload detected", this.state.plants);
     return (
-      <li>
-        <div>
-          <h2> Name:{this.props.common_name}</h2>
-          <h4>Scientific name:{this.props.scientific_name}</h4>
-          <h4>State: {this.props.State}</h4>
-          <h4> Toxicity: {this.props.Toxicity}</h4>
-          <h4>Life Cycle: {this.props.Life_cycle}</h4>
-        </div>
-        <img src={this.props.image} alt="plant"></img>
-        <HomeButton />
-      </li>
+      <ul>
+        {this.state.plants &&
+          this.state.plants.map((plant) => {
+            return (
+              <li>
+                <div>
+                  <h2> Name:{plant.Common_name}</h2>
+                  <h4>Scientific name:{plant.Scientific_name}</h4>
+                  <h4>State: {plant.State}</h4>
+                  <h4> Toxicity: {plant.Toxicity}</h4>
+                  <h4>Life Cycle: {plant.Life_cycle}</h4>
+                </div>
+                <img src={plant.image} alt="plant"></img>
+              </li>
+            );
+          })}
+      </ul>
     );
   }
 }
 
-function HomeButton() {
+function LogoutButton() {
   let history = useHistory();
 
   function handleClick() {
-    console.log("home button was clicked");
+    console.log("Log out was clicked");
     history.push("/");
+    window.alert("You are now leaving eden");
   }
   return (
     <button type="button" onClick={handleClick}>
