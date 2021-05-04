@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { useHistory } from "react-router-dom";
+import "./Nursery.css";
 
 class Nursery extends Component {
   constructor(props) {
@@ -20,7 +21,7 @@ class Nursery extends Component {
   render() {
     console.log("payload detected", this.state.plants);
     return (
-      <ul>
+      <ul className="plants">
         {this.state.plants &&
           this.state.plants.map((plant) => {
             return (
@@ -32,7 +33,11 @@ class Nursery extends Component {
                   <h4> Toxicity: {plant.Toxicity}</h4>
                   <h4>Life Cycle: {plant.Life_cycle}</h4>
                 </div>
-                <img src={plant.image} alt="plant"></img>
+                <img
+                  src={plant.image}
+                  alt={plant.Common_name}
+                  crossOrigin="use-credentials"
+                ></img>
               </li>
             );
           })}
