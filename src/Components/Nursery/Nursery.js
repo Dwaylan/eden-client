@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 import "./Nursery.css";
 
 class Nursery extends Component {
@@ -36,7 +36,7 @@ class Nursery extends Component {
                 <img
                   src={plant.image}
                   alt={plant.Common_name}
-                  crossOrigin="use-credentials"
+                  crossOrigin="anonymous"
                 ></img>
               </li>
             );
@@ -46,20 +46,20 @@ class Nursery extends Component {
   }
 }
 
-function LogoutButton() {
-  let history = useHistory();
+// function HomeButton() {
+//   let history = useHistory();
 
-  function handleClick() {
-    console.log("Log out was clicked");
-    history.push("/");
-    window.alert("You are now leaving eden");
-  }
-  return (
-    <button type="button" onClick={handleClick}>
-      {" "}
-      Logout{" "}
-    </button>
-  );
-}
+//   function handleClick() {
+//     console.log("Home button was clicked");
+//     history.push("/");
+//     window.alert("You are now leaving eden");
+//   }
+//   return (
+//     <button type="button" onClick={handleClick}>
+//       {" "}
+//       Home{" "}
+//     </button>
+//   );
+// }
 
 export default Nursery;

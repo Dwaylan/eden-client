@@ -3,7 +3,10 @@ import { Switch, Route, Redirect } from "react-router";
 import cookie from "cookie";
 import Loginpage from "../Components/Loginpage/Loginpage";
 import Landingpage from "../Components/Landingpage/Landingpage";
+import About from "../Components/About/";
 import Nursery from "../Components/Nursery/Nursery";
+import Features from "../Components/Features/Features";
+import Future from "../Components/Future/Future";
 
 const checkAuth = () => {
   const cookies = cookie.parse(document.cookie);
@@ -32,6 +35,9 @@ const Router = () => {
         component={Nursery}
       ></ProtectedRoute>
       <Route exact path="/login" component={Loginpage}></Route>
+      <Route exact path="/about" component={About}></Route>
+      <Route exact path="/features" component={Features}></Route>
+      <Route exact path="/future" component={Future}></Route>
     </Switch>
   );
 };

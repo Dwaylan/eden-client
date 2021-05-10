@@ -17,26 +17,56 @@ function NurseryButton() {
   );
 }
 
-// function LoginButton() {
-//   let history = useHistory();
+function AboutButton() {
+  let history = useHistory();
 
-//   function handleClick() {
-//     console.log("login button was clicked");
-//     history.push("/login");
-//   }
-//   return (
-//     <button type="button" onClick={handleClick}>
-//       {" "}
-//       Login{" "}
-//     </button>
-//   );
-// }
+  function handleClick() {
+    console.log("about button was clicked");
+    history.push("/about");
+  }
+  return (
+    <button type="button" onClick={handleClick}>
+      {" "}
+      About{" "}
+    </button>
+  );
+}
+function FeaturesButton() {
+  let history = useHistory();
+
+  function handleClick() {
+    console.log("Features button was clicked");
+    history.push("/features");
+  }
+  return (
+    <button type="button" onClick={handleClick}>
+      {" "}
+      Features{" "}
+    </button>
+  );
+}
+function FutureButton() {
+  let history = useHistory();
+
+  function handleClick() {
+    console.log("Features button was clicked");
+    history.push("/future");
+  }
+  return (
+    <button type="button" onClick={handleClick}>
+      {" "}
+      The Future{" "}
+    </button>
+  );
+}
 
 export default function Nav() {
   return (
     <div className="Nav">
       <NurseryButton />
-      {/* <LoginButton /> */}
+      <AboutButton />
+      <FeaturesButton />
+      <FutureButton />
     </div>
   );
 }
