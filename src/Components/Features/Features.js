@@ -1,5 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
+import "./Features.css";
 
 function HomeButton() {
   let history = useHistory();
@@ -18,7 +19,7 @@ function HomeButton() {
 
 export default function Features() {
   return (
-    <div>
+    <div className="container">
       <h2>Features</h2>
       <p>
         Each plant within our eden database will have information pertaining to

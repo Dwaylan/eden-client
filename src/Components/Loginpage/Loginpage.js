@@ -27,7 +27,7 @@ class Loginpage extends Component {
 
   render() {
     return (
-      <div>
+      <div className="container">
         <form className="form_container" onSubmit={this.login}>
           <div>
             <label>Username</label>

@@ -1,5 +1,6 @@
 .Nav {
-  background-color: #dbe8ef;
+  background-color: whitesmoke;
   padding: 10px;
   justify-content: space-evenly;
+  box-shadow: 5px 5px 5px grey;
 }

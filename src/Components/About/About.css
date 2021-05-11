@@ -1,5 +1,5 @@
-.Welcome_statement {
-  text-align: center;
+.container {
+  background-color: white;
   opacity: 95%;
   box-shadow: 5px 5px 5px grey;
 }

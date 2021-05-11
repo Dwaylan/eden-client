@@ -1,4 +1,5 @@
 import React from "react";
+import "./About.css";
 import { useHistory } from "react-router-dom";
 
 function HomeButton() {
@@ -17,7 +18,7 @@ function HomeButton() {
 }
 export default function About() {
   return (
-    <div>
+    <div className="container">
       <h2>About</h2>
       <p>
         This app is a reflection of the current zietgiest and culmination of
@@ -25,6 +26,10 @@ export default function About() {
         Z, horticulture is an activity that has withstood the test of time, and
         with the eden app users can find information on their favorite plants in
         the palm of their hand.
+      </p>
+      <p>
+        The Eden app currently renders information on the state flowers for each
+        of the 50 states.
       </p>
       <HomeButton>Home</HomeButton>
     </div>

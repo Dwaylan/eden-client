@@ -1,5 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
+import "./Future.css";
 
 function HomeButton() {
   let history = useHistory();
@@ -17,7 +18,7 @@ function HomeButton() {
 }
 export default function () {
   return (
-    <div>
+    <div className="container">
       <h2>The future</h2>
       <HomeButton>Home</HomeButton>
     </div>
