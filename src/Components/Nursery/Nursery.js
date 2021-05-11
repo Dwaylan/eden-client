@@ -8,6 +8,7 @@ class Nursery extends Component {
 
     this.state = {
       plants: [],
+      search: "",
     };
   }
   componentDidMount() {
@@ -18,30 +19,33 @@ class Nursery extends Component {
       .then((data) => this.setState({ plants: data }));
   }
 
+  // onchange = e =>{
+  //   this.setState({ search: e.target.value})
+  // }
+
   render() {
     console.log("payload detected", this.state.plants);
     return (
-      <ul className="plants">
+      <div className="plants_container">
         {this.state.plants &&
           this.state.plants.map((plant) => {
             return (
-              <li>
-                <div>
-                  <h2> Name:{plant.Common_name}</h2>
-                  <h4>Scientific name:{plant.Scientific_name}</h4>
-                  <h4>State: {plant.State}</h4>
-                  <h4> Toxicity: {plant.Toxicity}</h4>
-                  <h4>Life Cycle: {plant.Life_cycle}</h4>
-                </div>
+              <div className="plants">
+                <h2>{plant.Common_name}</h2>
+                <h4>{plant.Scientific_name}</h4>
                 <img
+                  className="plant_images"
                   src={plant.image}
                   alt={plant.Common_name}
                   crossOrigin="anonymous"
                 ></img>
-              </li>
+                <h4>State: {plant.State}</h4>
+                <h4> Toxicity: {plant.Toxicity}</h4>
+                <h4>Life Cycle: {plant.Life_cycle}</h4>
+              </div>
             );
           })}
-      </ul>
+      </div>
     );
   }
 }

@@ -1,7 +1,21 @@
-.plants {
+.plants_container {
   width: 100vw;
   height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between 30px;
+  padding-top: 8px;
+  flex-wrap: wrap;
+}
+
+.plants {
+  width: 280px;
+  height: 530px;
+  padding: 10px;
+  border: solid 2px;
+  border-radius: 5%;
+}
+
+.plant_images {
+  width: 250px;
+  height: 250px;
+  border-radius: 5%;
 }

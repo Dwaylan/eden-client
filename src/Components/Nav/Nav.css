@@ -1,4 +1,5 @@
 .Nav {
   background-color: #dbe8ef;
   padding: 10px;
+  justify-content: space-evenly;
 }
