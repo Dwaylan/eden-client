@@ -9,8 +9,11 @@ class Nursery extends Component {
     this.state = {
       plants: [],
       search: "",
+      click: false,
     };
+    this.onClick = this.onClick.bind(this);
   }
+
   componentDidMount() {
     const plantApi = "https://eden-rest-api.vercel.app/plants";
 
@@ -19,31 +22,41 @@ class Nursery extends Component {
       .then((data) => this.setState({ plants: data }));
   }
 
-  // onchange = e =>{
-  //   this.setState({ search: e.target.value})
-  // }
+  onClick() {
+    this.setState((prevState) => ({ click: !prevState.click }));
+  }
 
   render() {
-    console.log("payload detected", this.state.plants);
+    console.log("Card was clicked:", this.state.click);
     return (
-      <div className="plants_container">
+      <div className="plants_container" onClick={this.onClick}>
         {this.state.plants &&
           this.state.plants.map((plant) => {
-            return (
-              <div className="plants">
-                <h2>{plant.Common_name}</h2>
-                <h4>{plant.Scientific_name}</h4>
-                <img
-                  className="plant_images"
-                  src={plant.image}
-                  alt={plant.Common_name}
-                  crossOrigin="anonymous"
-                ></img>
-                <h4>State: {plant.State}</h4>
-                <h4> Toxicity: {plant.Toxicity}</h4>
-                <h4>Life Cycle: {plant.Life_cycle}</h4>
-              </div>
-            );
+            if (this.state.click === true) {
+              return (
+                <div className="plants">
+                  <h2>{plant.Common_name}</h2>
+                  <h4>{plant.Scientific_name}</h4>
+                  <p>{plant.Blog}</p>
+                </div>
+              );
+            } else {
+              return (
+                <div className="plants">
+                  <h2>{plant.Common_name}</h2>
+                  <h4>{plant.Scientific_name}</h4>
+                  <img
+                    className="plant_images"
+                    src={plant.image}
+                    alt={plant.Common_name}
+                    crossOrigin="anonymous"
+                  ></img>
+                  <h4>State: {plant.State}</h4>
+                  <h4> Toxicity: {plant.Toxicity}</h4>
+                  <h4>Life Cycle: {plant.Life_cycle}</h4>
+                </div>
+              );
+            }
           })}
       </div>
     );
