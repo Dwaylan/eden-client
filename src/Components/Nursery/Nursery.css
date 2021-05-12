@@ -4,6 +4,7 @@
   display: flex;
   padding-top: 8px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .plants {
