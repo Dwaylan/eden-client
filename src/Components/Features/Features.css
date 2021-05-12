@@ -1,3 +1,7 @@
 .conatainer {
   box-shadow: 5px 5px 5px grey;
 }
+.flower_container {
+  display: flex;
+  justify-content: center;
+}

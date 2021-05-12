@@ -3,3 +3,11 @@
   opacity: 95%;
   box-shadow: 5px 5px 5px grey;
 }
+.Row_container {
+  display: flex;
+  justify-content: center;
+}
+.Row_image {
+  /* width: 500px; */
+  height: 497px;
+}

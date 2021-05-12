@@ -27,6 +27,13 @@ export default function Features() {
         indegenous plants by state while making users aware of posionus and
         invasive species
       </p>
+      <div className="flower_container">
+        <img
+          className="single_flower"
+          src={"../images/Single_flower_cropped.png"}
+          alt="single flower"
+        />
+      </div>
       <HomeButton>Home</HomeButton>
     </div>
   );

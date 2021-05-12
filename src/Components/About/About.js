@@ -31,6 +31,13 @@ export default function About() {
         The Eden app currently renders information on the state flowers for each
         of the 50 states.
       </p>
+      <div className="Row_container">
+        <img
+          className="Row_image"
+          src={"../images/Row_redacted.png"}
+          alt="row image"
+        />
+      </div>
       <HomeButton>Home</HomeButton>
     </div>
   );
