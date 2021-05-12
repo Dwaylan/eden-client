@@ -17,6 +17,11 @@
   background-color: white;
 }
 
+.plants:hover {
+  transform: scale(1.15);
+  transition-duration: 0.5s;
+}
+
 .plant_images {
   width: 250px;
   height: 250px;
