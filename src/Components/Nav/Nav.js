@@ -10,9 +10,9 @@ function NurseryButton() {
     history.push("/nursery");
   }
   return (
-    <button type="button" onClick={handleClick}>
+    <button type="button" className="Button" onClick={handleClick}>
       {" "}
-      nursery{" "}
+      Nursery{" "}
     </button>
   );
 }
@@ -25,7 +25,7 @@ function AboutButton() {
     history.push("/about");
   }
   return (
-    <button type="button" onClick={handleClick}>
+    <button type="button" className="Button" onClick={handleClick}>
       {" "}
       About{" "}
     </button>
@@ -39,7 +39,7 @@ function FeaturesButton() {
     history.push("/features");
   }
   return (
-    <button type="button" onClick={handleClick}>
+    <button type="button" className="Button" onClick={handleClick}>
       {" "}
       Features{" "}
     </button>
@@ -53,7 +53,7 @@ function FutureButton() {
     history.push("/future");
   }
   return (
-    <button type="button" onClick={handleClick}>
+    <button type="button" className="Button" onClick={handleClick}>
       {" "}
       The Future{" "}
     </button>

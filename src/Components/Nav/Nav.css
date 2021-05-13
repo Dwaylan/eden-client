@@ -4,3 +4,13 @@
   justify-content: space-evenly;
   box-shadow: 5px 5px 5px grey;
 }
+
+.Button {
+  background-color: transparent;
+  border: none;
+}
+
+.Button:hover {
+  background-color: #9ea08f;
+  border-radius: 12%;
+}

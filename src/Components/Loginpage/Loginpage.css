@@ -12,3 +12,19 @@
   opacity: 95%;
   background-color: #ecf5b6;
 }
+
+.label {
+  background-color: whitesmoke;
+  border-radius: 5%;
+  padding: 10px;
+}
+
+.input {
+  padding: 10px;
+  border: none;
+}
+
+.Button {
+  padding: 10px;
+  border: none;
+}

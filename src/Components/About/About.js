@@ -35,7 +35,7 @@ export default function About() {
         <img
           className="Row_image"
           src={"../images/Row_redacted.png"}
-          alt="row image"
+          alt="rows"
         />
       </div>
       <HomeButton>Home</HomeButton>

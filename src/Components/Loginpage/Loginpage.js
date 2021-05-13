@@ -30,18 +30,29 @@ class Loginpage extends Component {
       <div className="parent_container">
         <form className="form_container" onSubmit={this.login}>
           <div>
-            <label>Username</label>
-            <input type="text"></input>
+            <label className="label">Username</label>
+            <input type="text" className="input"></input>
           </div>
           <div>
-            <label>Email</label>
-            <input type="email"></input>
+            <br />
           </div>
           <div>
-            <label>Password</label>
-            <input type="password"></input>
+            <label className="label">Email</label>
+            <input type="email" className="input"></input>
           </div>
-          <button type="submit">Login</button>
+          <div>
+            <br />
+          </div>
+          <div>
+            <label className="label">Password</label>
+            <input type="password" className="input"></input>
+          </div>
+          <div>
+            <br />
+          </div>
+          <button type="submit" className="Button">
+            Login
+          </button>
         </form>
       </div>
     );
