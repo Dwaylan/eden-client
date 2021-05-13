@@ -13,4 +13,5 @@
 .Button:hover {
   background-color: #9ea08f;
   border-radius: 12%;
+  color: white;
 }

@@ -9,9 +9,11 @@ class Nursery extends Component {
     this.state = {
       plants: [],
       search: "",
+      searchValue: props.value,
       click: false,
     };
     this.onClick = this.onClick.bind(this);
+    // this.handleChange = this.handleChange.bind(this);
   }
 
   componentDidMount() {
@@ -22,42 +24,64 @@ class Nursery extends Component {
       .then((data) => this.setState({ plants: data }));
   }
 
+  // handleChange(e) {
+  //   this.setState({ search: e.target.value });
+  //   console.log("now queuing");
+  // }
+  // handleSearchChange(e) {
+  //   e.preventDefault();
+  //   this.setState({ searchValue: e.target.value });
+  //   console.log(this.state.searchValue);
+  // }
+
   onClick() {
     this.setState((prevState) => ({ click: !prevState.click }));
   }
 
   render() {
-    console.log("Card was clicked:", this.state.click);
+    // console.log("Card was clicked:", this.state.click);
     return (
-      <div className="plants_container" onClick={this.onClick}>
-        {this.state.plants &&
-          this.state.plants.map((plant) => {
-            if (this.state.click === true) {
-              return (
-                <div className="plants">
-                  <h2>{plant.Common_name}</h2>
-                  <h4>{plant.Scientific_name}</h4>
-                  <p>{plant.Blog}</p>
-                </div>
-              );
-            } else {
-              return (
-                <div className="plants">
-                  <h2>{plant.Common_name}</h2>
-                  <h4>{plant.Scientific_name}</h4>
-                  <img
-                    className="plant_images"
-                    src={plant.image}
-                    alt={plant.Common_name}
-                    crossOrigin="anonymous"
-                  ></img>
-                  <h4>State: {plant.State}</h4>
-                  <h4> Toxicity: {plant.Toxicity}</h4>
-                  <h4>Life Cycle: {plant.Life_cycle}</h4>
-                </div>
-              );
-            }
-          })}
+      <div className="Nursery_parent_container">
+        <div className="search_bar">
+          <label className="search_component">
+            <select>
+              <option value="All">All</option>
+              <option value="Annual">annual</option>
+              <option value="Perennial">Perennial</option>
+              <option value="Biennial">Biennial</option>
+            </select>
+          </label>
+        </div>
+        <div className="plants_container" onClick={this.onClick}>
+          {this.state.plants &&
+            this.state.plants.map((plant) => {
+              if (this.state.click === true) {
+                return (
+                  <div className="plants">
+                    <h2>{plant.Common_name}</h2>
+                    <h4>{plant.Scientific_name}</h4>
+                    <p>{plant.Blog}</p>
+                  </div>
+                );
+              } else {
+                return (
+                  <div className="plants">
+                    <h2>{plant.Common_name}</h2>
+                    <h4>{plant.Scientific_name}</h4>
+                    <img
+                      className="plant_images"
+                      src={plant.image}
+                      alt={plant.Common_name}
+                      crossOrigin="anonymous"
+                    ></img>
+                    <h4>State: {plant.State}</h4>
+                    <h4> Toxicity: {plant.Toxicity}</h4>
+                    <h4>Life Cycle: {plant.Life_cycle}</h4>
+                  </div>
+                );
+              }
+            })}
+        </div>
       </div>
     );
   }
