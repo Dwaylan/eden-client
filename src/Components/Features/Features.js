@@ -10,7 +10,7 @@ function HomeButton() {
     history.push("/");
   }
   return (
-    <button type="button" onClick={handleClick}>
+    <button type="button" className="Home" onClick={handleClick}>
       {" "}
       Home{" "}
     </button>

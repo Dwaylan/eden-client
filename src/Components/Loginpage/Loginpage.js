@@ -22,7 +22,7 @@ class Loginpage extends Component {
     // set loggedIn = true and max-age = 60*1000 (one minute)
     document.cookie = "loggedIn=true;max-age=480*1000";
     window.location.replace("/Nursery");
-    window.alert("You are now entering eden");
+    // window.alert("You are now entering eden");
   };
 
   render() {

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import { useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import "./Nursery.css";
 
 class Nursery extends Component {
@@ -46,11 +46,12 @@ class Nursery extends Component {
           <label className="search_component">
             <select>
               <option value="All">All</option>
-              <option value="Annual">annual</option>
               <option value="Perennial">Perennial</option>
+              <option value="Annual">annual</option>
               <option value="Biennial">Biennial</option>
             </select>
           </label>
+          <HomeButton className="Home" />
         </div>
         <div className="plants_container" onClick={this.onClick}>
           {this.state.plants &&
@@ -87,20 +88,20 @@ class Nursery extends Component {
   }
 }
 
-// function HomeButton() {
-//   let history = useHistory();
+function HomeButton() {
+  let history = useHistory();
 
-//   function handleClick() {
-//     console.log("Home button was clicked");
-//     history.push("/");
-//     window.alert("You are now leaving eden");
-//   }
-//   return (
-//     <button type="button" onClick={handleClick}>
-//       {" "}
-//       Home{" "}
-//     </button>
-//   );
-// }
+  function handleClick() {
+    console.log("Home button was clicked");
+    history.push("/");
+    window.alert("You are now leaving eden");
+  }
+  return (
+    <button type="button" className="Home" onClick={handleClick}>
+      {" "}
+      Home{" "}
+    </button>
+  );
+}
 
 export default Nursery;
