@@ -1,4 +1,4 @@
-.plants_container {
+/* .plants_container {
   width: 100vw;
   height: 100vh;
   padding-top: 8px;
@@ -10,8 +10,8 @@
 }
 
 .plants {
-  /* width: 285px;
-  height: 505px; */
+   width: 285px;
+  height: 505px; 
   padding: 12px;
   border: solid 1.75px grey;
   border-radius: 5%;
@@ -57,4 +57,30 @@
   width: 250px;
   height: 250px;
   border-radius: 5%;
+} */
+
+.heading {
+  font-size: 30px;
+  padding: 16px 0px;
+  text-align: center;
+}
+
+.search-container {
+  margin: 36px auto;
+  width: 100%;
+  max-width: 800px;
+}
+
+.search-label {
+  position: relative;
+}
+
+.search-container input {
+  width: 100%;
+  padding: 16px;
+  font-size: 36px;
+  font-style: italic;
+  box-sizing: border-box;
+  outline: none;
+  box-shadow: 0 5px 5px -5px grey;
 }
