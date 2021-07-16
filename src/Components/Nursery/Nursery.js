@@ -43,14 +43,6 @@ class Nursery extends Component {
     return (
       <div className="Nursery_parent_container">
         <div className="search_bar">
-          <label className="search_component">
-            <select>
-              <option value="All">All</option>
-              <option value="Perennial">Perennial</option>
-              <option value="Annual">annual</option>
-              <option value="Biennial">Biennial</option>
-            </select>
-          </label>
           <HomeButton className="Home" />
         </div>
         <div className="plants_container" onClick={this.onClick}>
@@ -61,6 +53,9 @@ class Nursery extends Component {
                   <div className="plants">
                     <h2>{plant.Common_name}</h2>
                     <h4>{plant.Scientific_name}</h4>
+
+                    <h4> Toxicity: {plant.Toxicity}</h4>
+                    <h4>Life Cycle: {plant.Life_cycle}</h4>
                     <p>{plant.Blog}</p>
                   </div>
                 );
@@ -69,15 +64,13 @@ class Nursery extends Component {
                   <div className="plants">
                     <h2>{plant.Common_name}</h2>
                     <h4>{plant.Scientific_name}</h4>
+                    <h4>State: {plant.State}</h4>
                     <img
                       className="plant_images"
                       src={plant.image}
                       alt={plant.Common_name}
                       crossOrigin="anonymous"
                     ></img>
-                    <h4>State: {plant.State}</h4>
-                    <h4> Toxicity: {plant.Toxicity}</h4>
-                    <h4>Life Cycle: {plant.Life_cycle}</h4>
                   </div>
                 );
               }

@@ -1,20 +1,23 @@
 .plants_container {
   width: 100vw;
   height: 100vh;
-  display: flex;
   padding-top: 8px;
-  flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.75rem;
 }
 
 .plants {
-  width: 285px;
-  height: 505px;
-  padding: 10px;
+  /* width: 285px;
+  height: 505px; */
+  padding: 12px;
   border: solid 1.75px #ecf5b6;
   border-radius: 5%;
   box-shadow: 5px 5px 5px grey;
   background-color: white;
+  align-content: center;
 }
 
 .plants:hover {
